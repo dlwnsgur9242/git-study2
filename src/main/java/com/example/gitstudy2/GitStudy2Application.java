@@ -1,5 +1,8 @@
 package com.example.gitstudy2;
 
+import com.example.gitstudy2.java.Car;
+import com.example.gitstudy2.java.MotoCycle;
+import com.example.gitstudy2.java.Vehicle;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,8 +11,12 @@ public class GitStudy2Application {
 
 
 	public static void main(String[] args){
-		System.out.println("new line");
-		SpringApplication.run(GitStudy2Application.class, args);
+		printVehicle(new Car());
+		printVehicle(new MotoCycle());
+	}
+
+	public static void printVehicle(Vehicle vehicle){
+		vehicle.drive();
 	}
 
 }
